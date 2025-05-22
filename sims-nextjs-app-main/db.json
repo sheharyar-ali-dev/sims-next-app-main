@@ -1,0 +1,264 @@
+{
+  "roboticAssets": [
+    {
+      "id": "ra001",
+      "name": "PackBot 510",
+      "model": "PB-510-A2",
+      "manufacturer": "iRobot Defense",
+      "status": "operational",
+      "category": "exploration",
+      "description": "Tactical mobile robot for hazardous environments and reconnaissance"
+    },
+    {
+      "id": "ra002",
+      "name": "Spot",
+      "model": "Enterprise Plus",
+      "manufacturer": "Boston Dynamics",
+      "status": "operational",
+      "category": "quadruped",
+      "description": "Agile mobile robot that navigates terrain with unprecedented mobility"
+    },
+    {
+      "id": "ra003",
+      "name": "Atlas",
+      "model": "Atlas 2.5",
+      "manufacturer": "Boston Dynamics",
+      "status": "maintenance",
+      "category": "humanoid",
+      "description": "Advanced bipedal humanoid robot designed for search and rescue tasks"
+    },
+    {
+      "id": "ra001",
+      "name": "PackBot 510",
+      "model": "PB-510-A2",
+      "manufacturer": "iRobot Defense",
+      "status": "operational",
+      "category": "exploration",
+      "description": "Tactical mobile robot for hazardous environments and reconnaissance"
+    },
+    {
+      "id": "ra002",
+      "name": "Spot",
+      "model": "Enterprise Plus",
+      "manufacturer": "Boston Dynamics",
+      "status": "operational",
+      "category": "quadruped",
+      "description": "Agile mobile robot that navigates terrain with unprecedented mobility"
+    },
+    {
+      "id": "ra003",
+      "name": "Atlas",
+      "model": "Atlas 2.5",
+      "manufacturer": "Boston Dynamics",
+      "status": "maintenance",
+      "category": "humanoid",
+      "description": "Advanced bipedal humanoid robot designed for search and rescue tasks"
+    }
+  ],
+  "productInfo": [
+    {
+      "id": "pi001",
+      "assetId": "ra001",
+      "specs": {
+        "dimensions": "18 x 52 x 69 cm",
+        "weight": "24 kg",
+        "power": "24V DC, 200W typical"
+      },
+      "features": [
+        "All-terrain mobility",
+        "Modular payload system",
+        "HD cameras with zoom"
+      ],
+      "manualUrl": "/manuals/packbot510_manual.pdf"
+    },
+    {
+      "id": "pi002",
+      "assetId": "ra002",
+      "specs": {
+        "dimensions": "84 x 40 x 110 cm",
+        "weight": "32.5 kg",
+        "power": "48V DC, Battery operated, 90 min runtime"
+      },
+      "features": [
+        "360° perception",
+        "Autonomous navigation",
+        "Stair climbing"
+      ],
+      "manualUrl": "/manuals/spot_manual.pdf"
+    },
+    {
+      "id": "pi003",
+      "assetId": "ra003",
+      "specs": {
+        "dimensions": "150 x 75 x 35 cm",
+        "weight": "89 kg",
+        "power": "48V DC, Battery operated, 60 min runtime"
+      },
+      "features": [
+        "Dynamic balancing",
+        "Whole-body manipulation",
+        "Obstacle avoidance"
+      ],
+      "manualUrl": "/manuals/atlas_manual.pdf"
+    }
+  ],
+  "parts": [
+    {
+      "id": "p001",
+      "assetId": "ra001",
+      "parentId": null,
+      "name": "Main Chassis",
+      "partNumber": "PCB-CHASSIS-001",
+      "category": "structure",
+      "description": "Primary structural frame for PackBot 510",
+      "cadModelId": "cad001"
+    },
+    {
+      "id": "p002",
+      "assetId": "ra001",
+      "parentId": null,
+      "name": "Track System",
+      "partNumber": "PCB-TRACK-001",
+      "category": "mobility",
+      "description": "Main track drive system",
+      "cadModelId": "cad002"
+    },
+    {
+      "id": "p003",
+      "assetId": "ra001",
+      "parentId": "p002",
+      "name": "Left Track Assembly",
+      "partNumber": "PCB-LTRACK-001",
+      "category": "mobility",
+      "description": "Left side complete track assembly",
+      "cadModelId": "cad003"
+    },
+    {
+      "id": "p004",
+      "assetId": "ra001",
+      "parentId": "p002",
+      "name": "Right Track Assembly",
+      "partNumber": "PCB-RTRACK-001",
+      "category": "mobility",
+      "description": "Right side complete track assembly",
+      "cadModelId": "cad004"
+    },
+    {
+      "id": "p005",
+      "assetId": "ra002",
+      "parentId": null,
+      "name": "Leg Assembly",
+      "partNumber": "SPOT-LEG-001",
+      "category": "mobility",
+      "description": "Complete leg assembly for Spot robot",
+      "cadModelId": "cad005"
+    },
+    {
+      "id": "p006",
+      "assetId": "ra002",
+      "parentId": "p005",
+      "name": "Hip Actuator",
+      "partNumber": "SPOT-HIP-001",
+      "category": "mobility",
+      "description": "Hip joint actuator for Spot leg",
+      "cadModelId": "cad006"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "ri001",
+      "assetId": "ra001",
+      "title": "Track Belt Replacement",
+      "difficulty": "medium",
+      "estimatedTime": "45 minutes",
+      "partsNeeded": ["p003", "p004"],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Prepare Robot",
+          "description": "Power down the robot and disconnect the battery pack."
+        },
+        {
+          "step": 2,
+          "title": "Remove Track Guards",
+          "description": "Remove the six bolts securing the track guard."
+        },
+        {
+          "step": 3,
+          "title": "Replace Track",
+          "description": "Remove old track and install new one."
+        }
+      ]
+    },
+    {
+      "id": "ri002",
+      "assetId": "ra002",
+      "title": "Battery Replacement",
+      "difficulty": "easy",
+      "estimatedTime": "15 minutes",
+      "partsNeeded": [],
+      "steps": [
+        {
+          "step": 1,
+          "title": "Power Down",
+          "description": "Hold power button for 3 seconds until LEDs turn off."
+        },
+        {
+          "step": 2,
+          "title": "Replace Battery",
+          "description": "Remove old battery and insert new one."
+        }
+      ]
+    }
+  ],
+  "cadModels": [
+    {
+      "id": "cad001",
+      "assetId": "ra001",
+      "name": "PackBot Chassis",
+      "fileUrl": "/cad/packbot_chassis.step",
+      "fileFormat": "STEP",
+      "thumbnailUrl": "/cad-images/01.png"
+    },
+    {
+      "id": "cad002",
+      "assetId": "ra001",
+      "name": "PackBot Track System",
+      "fileUrl": "/cad/packbot_track_system.step",
+      "fileFormat": "STEP",
+      "thumbnailUrl": "/cad-images/02.webp"
+    },
+    {
+      "id": "cad003",
+      "assetId": "ra001",
+      "name": "PackBot Left Track",
+      "fileUrl": "/cad/packbot_left_track.step",
+      "fileFormat": "STEP",
+      "thumbnailUrl": "/cad-images/03.jpeg"
+    },
+    {
+      "id": "cad004",
+      "assetId": "ra001",
+      "name": "PackBot Right Track",
+      "fileUrl": "/cad/packbot_right_track.step",
+      "fileFormat": "STEP",
+      "thumbnailUrl": "/cad-images/04.jpg"
+    },
+    {
+      "id": "cad005",
+      "assetId": "ra002",
+      "name": "Spot Leg Assembly",
+      "fileUrl": "/cad/spot_leg.step",
+      "fileFormat": "STEP",
+      "thumbnailUrl": "/cad-images/01.png"
+    },
+    {
+      "id": "cad006",
+      "assetId": "ra002",
+      "name": "Spot Hip Actuator",
+      "fileUrl": "/cad/spot_hip_actuator.step",
+      "fileFormat": "STEP",
+      "thumbnailUrl": "/cad-images/02.webp"
+    }
+  ]
+}
